@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { List } from "./components/List";
 
 function App() {
+  //TODO Fetch eleje
   const [state, setState] = useState(undefined);
 
   useEffect(() => {
@@ -21,10 +22,11 @@ function App() {
   if (state) {
     console.log(state.photos[0].src.landscape);
   }
+  //TODO Fetch vége
 
   return (
     <div className="App">
-      {state && <img src={state.photos[0].src.landscape} alt="" />}
+      {state && <img src={state.photos[0].src.landscape} alt="" />} {/* Fetch */}
       <List />
     </div>
   );
