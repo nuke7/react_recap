@@ -6,12 +6,13 @@ const StyledDiv = styled.div`
   height: auto;
   margin: auto;
   border: 1px solid blue;
+  margin-top: 10px;
 `;
 
 export function Div({ children, ...props }) {
   return (
-    <div {...props}>
+    <StyledDiv {...props}>
       {children} {props.content}
-    </div>
+    </StyledDiv>
   );
 }
